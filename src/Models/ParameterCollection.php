@@ -4,7 +4,7 @@
 namespace HKwak\PhpGen\Models;
 
 
-use Hkwak\Types\AbstractCollection;
+use HKwak\PhpGen\Types\AbstractCollection;
 
 class ParameterCollection extends AbstractCollection
 {

@@ -3,7 +3,7 @@
 namespace HKwak\PhpGen\Models;
 
 
-use Hkwak\Types\StringCollection;
+use HKwak\PhpGen\Types\StringCollection;
 
 class ClassModel extends AbstractExtendableModel implements PropertiesAttributeInterface
 {

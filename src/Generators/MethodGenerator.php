@@ -3,9 +3,9 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeStreams\PhpCodeStream;
-use HKwak\Models\DocBlock;
-use HKwak\Models\MethodModel;
+use HKwak\PhpGen\CodeStreams\PhpCodeStream;
+use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\MethodModel;
 
 class MethodGenerator extends AbstractGenerator
 {

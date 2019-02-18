@@ -3,7 +3,7 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\Models\TraitModel;
+use HKwak\PhpGen\Models\TraitModel;
 
 class TraitGenerator extends AbstractFileGenerator
 {

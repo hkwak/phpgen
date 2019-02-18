@@ -4,7 +4,7 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\Models\InterfaceModel;
+use HKwak\PhpGen\Models\InterfaceModel;
 
 class InterfaceGenerator extends AbstractFileGenerator
 {

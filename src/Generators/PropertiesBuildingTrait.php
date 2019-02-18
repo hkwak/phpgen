@@ -4,8 +4,8 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeStreams\PhpCodeStream;
-use HKwak\Models\PropertiesAttributeInterface;
+use HKwak\PhpGen\CodeStreams\PhpCodeStream;
+use HKwak\PhpGen\Models\PropertiesAttributeInterface;
 
 trait PropertiesBuildingTrait
 {

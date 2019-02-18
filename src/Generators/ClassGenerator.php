@@ -4,8 +4,8 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\Models\ClassModel;
-use HKwak\Models\ConstModel;
+use HKwak\PhpGen\Models\ClassModel;
+use HKwak\PhpGen\Models\ConstModel;
 
 class ClassGenerator extends AbstractFileGenerator
 {

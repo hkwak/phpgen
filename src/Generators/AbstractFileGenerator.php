@@ -4,9 +4,9 @@
 namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeStreams\PhpCodeStream;
-use HKwak\Models\AbstractFileModel;
-use HKwak\Models\DocBlock;
+use HKwak\PhpGen\CodeStreams\PhpCodeStream;
+use HKwak\PhpGen\Models\AbstractFileModel;
+use HKwak\PhpGen\Models\DocBlock;
 
 abstract class AbstractFileGenerator extends AbstractGenerator
 {

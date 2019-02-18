@@ -2,9 +2,9 @@
 
 namespace HKwak\PhpGen\Generators;
 
-use HKwak\CodeStreams\PhpCodeStream;
-use HKwak\Models\DocBlock;
-use HKwak\Models\PropertyModel;
+use HKwak\PhpGen\CodeStreams\PhpCodeStream;
+use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\PropertyModel;
 
 class PropertyGenerator extends AbstractGenerator
 {
