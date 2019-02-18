@@ -5,11 +5,11 @@ namespace HKwak\PhpGen\CodeStreams;
 
 
 use HKwak\PhpGen\Models\DocBlock;
-use Hkwak\PhpGen\Types\StringCollection;
+use HKwak\PhpGen\Types\StringCollection;
 
 class PhpCodeStream
 {
-    const TAB_SIZE = 2;
+    const TAB_SIZE = 4;
 
     /**
      * @var StringCollection
