@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeGenerator\CodeStreams\PhpCodeStream;
-use HKwak\CodeGenerator\Models\PropertiesAttributeInterface;
+use HKwak\CodeStreams\PhpCodeStream;
+use HKwak\Models\PropertiesAttributeInterface;
 
 trait PropertiesBuildingTrait
 {

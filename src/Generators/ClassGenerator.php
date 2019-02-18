@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeGenerator\Models\ClassModel;
-use HKwak\CodeGenerator\Models\ConstModel;
+use HKwak\Models\ClassModel;
+use HKwak\Models\ConstModel;
 
 class ClassGenerator extends AbstractFileGenerator
 {

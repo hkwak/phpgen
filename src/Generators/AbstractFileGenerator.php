@@ -1,12 +1,12 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeGenerator\CodeStreams\PhpCodeStream;
-use HKwak\CodeGenerator\Models\AbstractFileModel;
-use HKwak\CodeGenerator\Models\DocBlock;
+use HKwak\CodeStreams\PhpCodeStream;
+use HKwak\Models\AbstractFileModel;
+use HKwak\Models\DocBlock;
 
 abstract class AbstractFileGenerator extends AbstractGenerator
 {

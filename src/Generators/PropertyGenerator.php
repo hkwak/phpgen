@@ -1,10 +1,10 @@
 <?php
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
-use HKwak\CodeGenerator\CodeStreams\PhpCodeStream;
-use HKwak\CodeGenerator\Models\DocBlock;
-use HKwak\CodeGenerator\Models\PropertyModel;
+use HKwak\CodeStreams\PhpCodeStream;
+use HKwak\Models\DocBlock;
+use HKwak\Models\PropertyModel;
 
 class PropertyGenerator extends AbstractGenerator
 {

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hkwak\Types;
+namespace HKwak\PhpGen\Types;
 
 
 class StringCollection extends AbstractCollection

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HKwak\CodeGenerator\Models;
+namespace HKwak\PhpGen\Models;
 
 
 class TraitModel extends AbstractFileModel implements PropertiesAttributeInterface

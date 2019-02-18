@@ -8,7 +8,13 @@
             "email": "henryk.kwak@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "HKwak\\PhpGen\\": "src/"
+        }
+    },
     "require": {
+        "php": ">=7.0",
         "rquadling/typed-array": "^1.0",
         "eloquent/enumeration": "^6.0"
     }

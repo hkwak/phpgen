@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeGenerator\Models\InterfaceModel;
+use HKwak\Models\InterfaceModel;
 
 class InterfaceGenerator extends AbstractFileGenerator
 {

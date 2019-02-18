@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
 abstract class AbstractGenerator implements GeneratorInterface

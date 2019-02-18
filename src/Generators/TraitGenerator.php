@@ -1,9 +1,9 @@
 <?php
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
-use HKwak\CodeGenerator\Models\TraitModel;
+use HKwak\Models\TraitModel;
 
 class TraitGenerator extends AbstractFileGenerator
 {

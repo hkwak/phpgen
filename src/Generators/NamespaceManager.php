@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HKwak\Generators;
+namespace HKwak\PhpGen\Generators;
 
 
 class NamespaceManager

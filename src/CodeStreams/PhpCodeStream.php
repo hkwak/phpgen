@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HKwak\CodeGenerator\CodeStreams;
+namespace HKwak\PhpGen\CodeStreams;
 
 
-use HKwak\CodeGenerator\Models\DocBlock;
+use HKwak\Models\DocBlock;
 use Hkwak\Types\StringCollection;
 
 class PhpCodeStream

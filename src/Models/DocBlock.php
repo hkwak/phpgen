@@ -1,6 +1,6 @@
 <?php
 
-namespace HKwak\CodeGenerator\Models;
+namespace HKwak\PhpGen\Models;
 
 
 use InvalidArgumentException;
