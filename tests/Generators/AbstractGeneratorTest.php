@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Hkwak\PhpGenTests\Generators;
+namespace HKwak\PhpGenTests\Generators;
 
 
 use HKwak\PhpGenTests\Generators\Fixtures\ConcreteGenerator;
