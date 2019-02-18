@@ -5,7 +5,7 @@ namespace HKwak\PhpGen\CodeStreams;
 
 
 use HKwak\PhpGen\Models\DocBlock;
-use HKwak\PhpGen\Types\StringCollection;
+use Hkwak\PhpGen\Types\StringCollection;
 
 class PhpCodeStream
 {
