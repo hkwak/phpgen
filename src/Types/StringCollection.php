@@ -4,9 +4,15 @@
 namespace HKwak\PhpGen\Types;
 
 
-class StringCollection extends AbstractCollection
+class StringCollection extends \ArrayObject
 {
-    const ARRAY_TYPE = 'string';
+    public function offsetSet($index, $newval)
+    {
+        if (!is_string($newval)) {
+            throw new \InvalidArgumentException('Parameter $newval is expected to be a string');
+        }
+        parent::offsetSet($index, $newval);
+    }
 
     /**
      * TypedArray constructor.
