@@ -1,0 +1,15 @@
+{
+    "name": "henrykkwak/phpgen",
+    "description": "PHP Generator",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Henryk Kwak",
+            "email": "henryk.kwak@gmail.com"
+        }
+    ],
+    "require": {
+        "rquadling/typed-array": "^1.0",
+        "eloquent/enumeration": "^6.0"
+    }
+}
