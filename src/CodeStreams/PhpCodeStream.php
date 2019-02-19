@@ -9,7 +9,7 @@ use HKwak\PhpGen\Types\StringCollection;
 
 class PhpCodeStream
 {
-    const TAB_SIZE = 4;
+    const DEFAULT_TAB_SIZE = 4;
 
     /**
      * @var StringCollection
@@ -22,6 +22,24 @@ class PhpCodeStream
     protected $currentIndent = 0;
 
     /**
+     * @var int
+     */
+    protected $tabSize = self::DEFAULT_TAB_SIZE;
+
+    /**
+     * PhpCodeStream constructor.
+     *
+     * @param int|null $tabSize The tab size ( default is 4 spaces )
+     */
+    public function __construct(int $tabSize = null)
+    {
+        if ($tabSize) {
+            $this->tabSize = $tabSize;
+        }
+        $this->code = new StringCollection();
+    }
+
+    /**
      * getting the tab(s)
      *
      * @param int $number Number of tabs to be added
@@ -30,7 +48,7 @@ class PhpCodeStream
      */
     public function getTab($number = 1): string
     {
-        return implode('', array_fill(0, self::TAB_SIZE * $number, ' '));
+        return implode('', array_fill(0, $this->tabSize * $number, ' '));
     }
 
     /**
@@ -74,11 +92,6 @@ class PhpCodeStream
     public function indentLines(int $tabs, string $code): string
     {
         return $this->prefixLines($this->getTab($tabs), $code);
-    }
-
-    public function __construct()
-    {
-        $this->code = new StringCollection();
     }
 
     /**
