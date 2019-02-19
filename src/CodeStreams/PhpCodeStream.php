@@ -28,7 +28,7 @@ class PhpCodeStream
      *
      * @return string;
      */
-    protected function getTab($number = 1): string
+    public function getTab($number = 1): string
     {
         return implode('', array_fill(0, self::TAB_SIZE * $number, ' '));
     }
@@ -40,7 +40,7 @@ class PhpCodeStream
      *
      * @return string;
      */
-    protected function getEol($number = 1): string
+    public function getEol($number = 1): string
     {
         return implode('', array_fill(0, $number, PHP_EOL));
     }
@@ -53,7 +53,7 @@ class PhpCodeStream
      *
      * @return string
      */
-    protected function prefixLines(string $prefix, string $code): string
+    public function prefixLines(string $prefix, string $code): string
     {
         return $prefix.str_replace(PHP_EOL, PHP_EOL.$prefix, $code);
     }
@@ -71,7 +71,7 @@ class PhpCodeStream
      *
      * @return string
      */
-    protected function indentLines(int $tabs, string $code): string
+    public function indentLines(int $tabs, string $code): string
     {
         return $this->prefixLines($this->getTab($tabs), $code);
     }

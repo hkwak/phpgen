@@ -50,5 +50,5 @@ $classGenerator = new ClassGenerator(
             new NamespaceManager()
         );
         
-$classCode = $classGenerator->generate($classModel);
+$classCode = $classGenerator->generate($classModel, new PhpCodeStream());
 ```
