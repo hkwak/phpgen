@@ -5,7 +5,7 @@ namespace HKwak\PhpGen\Models;
 
 use InvalidArgumentException;
 
-class DocBlock
+class DocBlockModel
 {
     /**
      * @var string|null
@@ -37,9 +37,9 @@ class DocBlock
     /**
      * @param string $comment
      *
-     * @return DocBlock
+     * @return DocBlockModel
      */
-    public function setComment(string $comment): DocBlock
+    public function setComment(string $comment): DocBlockModel
     {
         $this->comment = $comment;
 

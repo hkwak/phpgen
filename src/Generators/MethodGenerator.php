@@ -4,7 +4,7 @@ namespace HKwak\PhpGen\Generators;
 
 
 use HKwak\PhpGen\CodeStreams\PhpCodeStream;
-use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\DocBlockModel;
 use HKwak\PhpGen\Models\MethodModel;
 
 class MethodGenerator extends AbstractGenerator
@@ -65,9 +65,9 @@ class MethodGenerator extends AbstractGenerator
         return $code;
     }
 
-    protected function buildDocBlock(MethodModel $model): DocBlock
+    protected function buildDocBlock(MethodModel $model): DocBlockModel
     {
-        $docBlock = new DocBlock($model->getDescription());
+        $docBlock = new DocBlockModel($model->getDescription());
         foreach ($model->getParameters() as $parameter) {
             $docBlock->addAnnotation(
                 'param',

@@ -6,7 +6,7 @@ namespace HKwak\PhpGen\Generators;
 
 use HKwak\PhpGen\CodeStreams\PhpCodeStream;
 use HKwak\PhpGen\Models\AbstractFileModel;
-use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\DocBlockModel;
 
 abstract class AbstractFileGenerator extends AbstractGenerator
 {
@@ -91,11 +91,11 @@ abstract class AbstractFileGenerator extends AbstractGenerator
      *
      * @param AbstractFileModel $model
      *
-     * @return DocBlock
+     * @return DocBlockModel
      */
-    protected function buildDocBlock(AbstractFileModel $model): DocBlock
+    protected function buildDocBlock(AbstractFileModel $model): DocBlockModel
     {
-        $docBlock = new DocBlock('class '.$model->getName().PHP_EOL.$model->getDescription());
+        $docBlock = new DocBlockModel('class '.$model->getName().PHP_EOL.$model->getDescription());
 
         foreach ($model->getAnnotations() as $annotation) {
             $docBlock->addAnnotation($annotation['annotation'], $annotation['text']);

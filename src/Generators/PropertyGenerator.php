@@ -3,7 +3,7 @@
 namespace HKwak\PhpGen\Generators;
 
 use HKwak\PhpGen\CodeStreams\PhpCodeStream;
-use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\DocBlockModel;
 use HKwak\PhpGen\Models\PropertyModel;
 
 class PropertyGenerator extends AbstractGenerator
@@ -27,9 +27,9 @@ class PropertyGenerator extends AbstractGenerator
         return $stream->build();
     }
 
-    protected function buildDocBlock(PropertyModel $model): DocBlock
+    protected function buildDocBlock(PropertyModel $model): DocBlockModel
     {
-        $docBlock = new DocBlock($model->getDescription());
+        $docBlock = new DocBlockModel($model->getDescription());
         $docBlock->addAnnotation('var', ($model->getType() ?? 'mixed').(($model->isNullable() || $model->getDefaultValue() === 'null') ? '|null' : ''));
 
         foreach ($model->getAnnotations() as $annotation) {

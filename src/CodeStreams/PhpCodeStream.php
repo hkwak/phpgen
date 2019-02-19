@@ -4,7 +4,7 @@
 namespace HKwak\PhpGen\CodeStreams;
 
 
-use HKwak\PhpGen\Models\DocBlock;
+use HKwak\PhpGen\Models\DocBlockModel;
 use HKwak\PhpGen\Types\StringCollection;
 
 class PhpCodeStream
@@ -185,7 +185,7 @@ class PhpCodeStream
         return $this;
     }
 
-    final public function docBlockComment(DocBlock $docBlock): self
+    final public function docBlockComment(DocBlockModel $docBlock): self
     {
         $code = [];
         if ($docBlock->getComment()) {
