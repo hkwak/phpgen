@@ -73,7 +73,9 @@ class PhpCodeStream
      */
     public function prefixLines(string $prefix, string $code): string
     {
-        return $prefix.str_replace(PHP_EOL, PHP_EOL.$prefix, $code);
+        // The preg_replace is to remove trailing spaces on empty comment lines. The rtrim is to remove lines that consist
+        // of only spaces.
+        return rtrim($prefix.str_replace(PHP_EOL, PHP_EOL.$prefix, preg_replace('/\*\s*'.PHP_EOL.'/', '*'.PHP_EOL, $code)));
     }
 
     protected function appendCode(string $code)
