@@ -117,10 +117,8 @@ abstract class AbstractFileGenerator extends AbstractGenerator
 
         // namespace
         if ($model->getNamespace()) {
-            $this->stream->eol()->code('namespace '.$model->getNamespace().';')->eol();
+            $this->stream->code('namespace '.$model->getNamespace().';')->eol();
         }
-
-        $this->stream->eol();
 
         // uses
         foreach ($model->getUses() as $use) {
@@ -129,7 +127,9 @@ abstract class AbstractFileGenerator extends AbstractGenerator
                 $this->stream->code('use '.$use.';');
             }
         }
-        $this->stream->eol();
+        if ($model->getUses()->count()) {
+            $this->stream->eol(); // Only output a blank line if we outputted any "use" statements.
+        }
         $this->stream->docBlockComment($this->buildDocBlock($model));
         $this->stream->code($this->buildSignature($model));
     }
