@@ -220,6 +220,7 @@ class PhpCodeStream
             }
             // adding other annotations
             foreach ($docBlock->getRemainingAnnotations() as $annotation) {
+                // Sometimes an annotation has no text, so the rtrim is to remove any possible trailing spaces.
                 $code[] = trim('@'.$annotation['annotation'].' '.$annotation['text']);
             }
         }
