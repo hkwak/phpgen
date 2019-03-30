@@ -218,7 +218,7 @@ class PhpCodeStream
             }
             // adding other annotations
             foreach ($docBlock->getRemainingAnnotations() as $annotation) {
-                $code[] = '@'.$annotation['annotation'].' '.$annotation['text'];
+                $code[] = trim('@'.$annotation['annotation'].' '.$annotation['text']);
             }
         }
 
