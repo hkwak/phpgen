@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "HKwak\\PhpGen\\": "src/",
+            "HKwak\\PhpGen\\": "src/"
         }
     },
     "autoload-dev": {
