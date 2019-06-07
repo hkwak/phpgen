@@ -11,6 +11,10 @@
     "autoload": {
         "psr-4": {
             "HKwak\\PhpGen\\": "src/",
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "HKwak\\PhpGenTests\\": "tests/"
         }
     },
