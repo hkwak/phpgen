@@ -87,7 +87,7 @@ abstract class AbstractFileGenerator extends AbstractGenerator
     abstract function buildSignature($model): string;
 
     /**
-     * Building the docblock for a File ( class, trait or interface level
+     * Building the docblock for a File (class, trait or interface level)
      *
      * @param AbstractFileModel $model
      *
@@ -95,7 +95,7 @@ abstract class AbstractFileGenerator extends AbstractGenerator
      */
     protected function buildDocBlock(AbstractFileModel $model): DocBlockModel
     {
-        $docBlock = new DocBlockModel('class '.$model->getName().PHP_EOL.$model->getDescription());
+        $docBlock = new DocBlockModel('class '.$model->getName().($model->getDescription()?PHP_EOL.$model->getDescription():''));
 
         foreach ($model->getAnnotations() as $annotation) {
             $docBlock->addAnnotation($annotation['annotation'], $annotation['text']);
@@ -105,7 +105,7 @@ abstract class AbstractFileGenerator extends AbstractGenerator
     }
 
     /**
-     * Building the File heading ( defining the namespace, usages, docblock and the signature
+     * Building the File heading (defining the namespace, usages, docblock and the signature)
      *
      * @param AbstractFileModel $model
      */
@@ -117,10 +117,8 @@ abstract class AbstractFileGenerator extends AbstractGenerator
 
         // namespace
         if ($model->getNamespace()) {
-            $this->stream->eol()->code('namespace '.$model->getNamespace().';')->eol();
+            $this->stream->code('namespace '.$model->getNamespace().';')->eol();
         }
-
-        $this->stream->eol();
 
         // uses
         foreach ($model->getUses() as $use) {
@@ -129,7 +127,9 @@ abstract class AbstractFileGenerator extends AbstractGenerator
                 $this->stream->code('use '.$use.';');
             }
         }
-        $this->stream->eol();
+        if ($model->getUses()->count()) {
+            $this->stream->eol(); // Only output a blank line if we outputted any "use" statements.
+        }
         $this->stream->docBlockComment($this->buildDocBlock($model));
         $this->stream->code($this->buildSignature($model));
     }
