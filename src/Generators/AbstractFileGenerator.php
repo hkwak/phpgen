@@ -95,7 +95,7 @@ abstract class AbstractFileGenerator extends AbstractGenerator
      */
     protected function buildDocBlock(AbstractFileModel $model): DocBlockModel
     {
-        $docBlock = new DocBlockModel();
+        $docBlock = new DocBlockModel($model->getDescription());
 
         foreach ($model->getAnnotations() as $annotation) {
             $docBlock->addAnnotation($annotation['annotation'], $annotation['text']);
