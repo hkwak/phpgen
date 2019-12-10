@@ -233,7 +233,9 @@ class PhpCodeStream
             $code[] = '@return '.$docBlock->getReturnAnnotation();
         }
 
-        $this->appendCode('/**'.PHP_EOL.$this->prefixLines(' * ', implode(PHP_EOL, $code)).PHP_EOL.' */');
+        if (!empty($code)) {
+            $this->appendCode('/**'.PHP_EOL.$this->prefixLines(' * ', implode(PHP_EOL, $code)).PHP_EOL.' */');
+        }
 
         return $this;
     }
